@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+</head>
+<body>
+    <script>
+        const bookData = {
+            "Books": [
+                {
+                    "title": "The Great Gatsby",
+                    "author": "F. Scott Fitzgerald",
+                    "publicationYear": 1925,
+                    "genres": ["Fiction", "Classics"]
+                },
+                {
+                    "title": "To Kill a Mockingbird",
+                    "author": "Harper Lee",
+                    "publicationYear": 1960,
+                    "genres": ["Fiction", "Coming-of-Age"]
+                }
+            ]
+        };
+
+        // Loop through each book and log its details
+        bookData.Books.forEach((book, index) => {
+            console.log(`Details of Book ${index + 1}:`);
+            console.log("Title:", book.title);
+            console.log("Author:", book.author);
+            console.log("Publication Year:", book.publicationYear);
+            console.log("Genres:", book.genres.join(", "));
+            console.log("-----");  // separator for clarity
+        });
+    </script>
+</body>
+</html>
+
